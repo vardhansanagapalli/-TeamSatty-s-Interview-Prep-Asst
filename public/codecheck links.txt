@@ -1,0 +1,42 @@
+Codecheck
+
+Python Lists:
+https://codecheck.io/assignment/24052518001oivexrijbqp8ezavi2ci2hzf
+https://codecheck.io/private/assignment/24052518001oivexrijbqp8ezavi2ci2hzf/EVMDG3Y1JLGU8NY07FVEAONFL
+
+Python Complex Loops:
+https://codecheck.io/assignment/24052519251qkyjmd5osf3wmkg184mmdo26
+https://codecheck.io/private/assignment/24052519251qkyjmd5osf3wmkg184mmdo26/2VWCK4EXQETOK9S644XDBZ8XY
+
+Python Functions:
+https://codecheck.io/assignment/2405251926bgazarfq25iuro4ww6rbzhxtv
+https://codecheck.io/private/assignment/2405251926bgazarfq25iuro4ww6rbzhxtv/3E67FDAW1KID215MR3G4GRL2R
+
+Python Tables:
+https://codecheck.io/assignment/2405251928190dmikp44w75wsy4yw169nka
+https://codecheck.io/private/assignment/2405251928190dmikp44w75wsy4yw169nka/A0R46D4OC1STMESNFEEMXWD9E
+
+Sets and Dicts:
+https://codecheck.io/assignment/24052518043s1ir7v4umqicnxc5taqt0pdx
+https://codecheck.io/private/assignment/24052518043s1ir7v4umqicnxc5taqt0pdx/C20LSY7GJP3TW98G6H1PDSOIE
+
+JAVA Array algorithms:
+https://codecheck.io/assignment/24052519113clbb3ypamvvahkebgb6xmkiv
+https://codecheck.io/private/assignment/24052519113clbb3ypamvvahkebgb6xmkiv/Q4MV4PTUPXHXKZMO9HB5I4O9
+
+Java OO Design:
+https://codecheck.io/assignment/2405251816cll5y5acv2ss64nsupa37qbfp
+https://codecheck.io/private/assignment/2405251816cll5y5acv2ss64nsupa37qbfp/E1ISYX6M0HKEX5X1ROBUAJO2Q
+
+Java Interfaces:
+https://codecheck.io/assignment/24052519126n3wgsaplnrvwk2o6k2ti6nrh
+https://codecheck.io/private/assignment/24052519126n3wgsaplnrvwk2o6k2ti6nrh/66C2V6CFIVHQGOW4U6MAHOURS
+
+Java Nested Branches:
+https://codecheck.io/assignment/24052519149xhlfesohtabiclkwulxqimm0
+https://codecheck.io/private/assignment/24052519149xhlfesohtabiclkwulxqimm0/8MSZJRZH9KQWY0CA56B6UCJLF
+
+Java Sentinels and Loop Algorithms
+https://codecheck.io/assignment/2405251916e51ouy580f6k7vvps7jicguzk
+https://codecheck.io/private/assignment/2405251916e51ouy580f6k7vvps7jicguzk/96H5LISDE1O92SNCZDF8PVLH7
+
