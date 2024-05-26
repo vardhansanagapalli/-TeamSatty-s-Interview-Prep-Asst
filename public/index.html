@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interview Preparation Assistance by Team Satty</title>
+    <link rel="shortcut icon" href="sattyfavicon.png" type="image/x-icon" width="16px" height="16">
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <style>
+    :root {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --link-color: #8800ff;
+            --button-background-color: #3D3D6E;
+            --button-text-color: #ffffff;
+            --header-background-color: #ffffff;
+            --header-text-color: #000000;
+
+}       
+        [data-theme="dark"] {
+            --background-color: #10101d;
+            --text-color: #ffffff;
+            --link-color: #6868bd;
+            --button-background-color: #8ab4f8;
+            --button-text-color: #000000;
+            --header-background-color: #10101d;
+            --header-text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        button {
+            background-color: var(--button-background-color);
+            color: var(--button-text-color);
+        }
+
+        nav,
+        footer {
+            background-color: var(--header-background-color);
+            color: var(--header-text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .theme-toggle {
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .banner { margin: 10px 0; }
+        .buttonmock {
+  display: inline-block;
+  border-radius: 0px;
+  background-color: #10101d;
+  border: none;
+  color: #aeb8c0;
+  text-align: center;
+  font-size: 20px;
+  padding: 0px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.buttonmock span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonmock span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonmock:hover span {
+  padding-right: 30px;
+}
+
+.buttonmock:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('first-name').value.trim();
+            const lastName = document.getElementById('last-name').value.trim();
+            const email = document.getElementById('user-email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirm-password').value.trim();
+            const phoneNumber = document.getElementById('phone-number').value.trim();
+            const nameRegex = /^[A-Za-z]+$/;
+            const phoneRegex = /^\d{10}$/;
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            
+
+            if (!nameRegex.test(firstName)) {
+                alert('First name should only contain letters.');
+                return false;
+            }
+
+            if (!nameRegex.test(lastName)) {
+                alert('Last name should only contain letters.');
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert('Password should be at least 8 characters long and contain a number and a special character.');
+                return false;
+            }
+
+            if (!phoneRegex.test(phoneNumber)) {
+                alert('Phone number should be exactly 10 digits.');
+                return false;
+            }
+
+            // If validation passes, submit the form
+            document.getElementById('signup-form').submit();
+        }
+
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        });
+    </script>
+</head>
+
+<body>
+        <nav class="container-fluid">
+            <a href="#" class="header-logo">
+                <img src="teamsattynewsletterhover.png" alt="Team Satty's logo" width="240" height="80">
+            </a>
+        <ul>
+            <li><a href="#home" style="color: #ff914d;">Home</a></li>
+            <li><a href="#about" style="color: #ff914d;">About</a></li>
+            <li><a href="#getstarted" style="color: #ff914d;">Get Started</a></li>
+            <li><a href="#contact" style="color: #ff914d;">Contact Us</a></li>
+            <li><a href="#signup" role="button" class="button">Sign Up</a></li>
+            <li><i class="fa fa-adjust theme-toggle" onclick="toggleTheme()"></i></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="banner">
+
+            <div class="container">
+      
+              <div class="slider-container has-scrollbar">
+      
+                <div class="slider-item">
+      
+                  <img src="5.png" alt="Best-In-Class Preparation assistance" class="banner-img">
+      
+                  <div class="banner-content">
+      
+                    <p style="color:black" class="banner-subtitle">Best-In-Class</p>
+      
+                    <h2 class="banner-title">Programming Tests</h2>
+      
+                    <a href="mock.html" class="banner-btn1">Test Yourself Now!</a>
+      
+                  </div>
+      
+                </div>
+      
+                <div class="slider-item">
+      
+                  <img src="6.png" alt="WindowsBanner" class="banner-img">
+      
+                  <div class="banner-content">
+      
+                    <p class="banner-subtitle">Resume</p>
+      
+                    <h2 style="color:beige; ;" class="banner-title">Professional Template</h2>
+      
+                    <a href="#" class="banner-btn2">Edit Now!</a>
+      
+                  </div>
+      
+                </div>
+      
+                <div class="slider-item">
+      
+                  <img src="4.png" alt="DuoLingo Banner" class="banner-img">
+      
+                  <div class="banner-content">
+      
+                    <p style="color:black" class="banner-subtitle">Learn New!</p>
+      
+                    <h2 class="banner-title">Interview Tips and Tricks</h2>
+      
+                    <a href="tips.html" class="banner-btn3">Explore Now</a>
+      
+                  </div>
+      
+                </div>
+      
+              </div>
+      
+            </div>
+      
+          </div>
+        <div class="grid">
+            <section id="home">
+                <hgroup>
+                    <br>
+                    <h2>Welcome to Interview Preparation Assistance by Team Satty <sup> GITAM </sup></h2>
+                    <h3>Our mission is to provide comprehensive resources and guidance to help you excel in your
+                        interviews. We offer tips, mock interviews, and personalized feedback to ensure you are fully
+                        prepared for your big day.</h3>
+                </hgroup>
+                <h2>Mock Programming Tests on Java and Python</h2>
+                <p>Prepare for technical interviews with our comprehensive mock programming tests. Whether you're a Java
+                    or Python enthusiast, we've got you covered!</p>
+
+                <h3>Java Programming Tests</h3>
+                <p>Our Java programming tests are designed to challenge your problem-solving skills and help you master
+                    the language. With a variety of questions ranging from basic syntax to advanced algorithms, you’ll
+                    be well-prepared for any coding interview.</p>
+
+                <h3>Python Programming Tests</h3>
+                <p>Our Python programming tests cater to both beginners and experienced developers. These tests will
+                    help you understand Python’s versatile capabilities and improve your coding efficiency. From data
+                    structures to complex algorithms, our tests cover it all.</p>
+
+                <section id="getstarted">
+                    <h3>Get Started</h3>
+                    <p>Join our program today and take the first step towards landing your dream job. Contact us for
+                        more
+                        details and schedule your first session.</p>
+                    <p>Prepare for your interviews with our comprehensive resources and expert guidance. We offer
+                        personalized coaching, extensive study materials, and mock interviews to help you succeed in any
+                        interview.</p>
+                    <ul>
+                        <li><a href="mock.html" class="buttonmock" style="vertical-align:right"><span>Programming Tests</span> </a></li>
+                        <li><a href="resumebuild.html" class="buttonmock" style="vertical-align:right"><span> Resume Building</span></a>
+                        <li><a href="tips.html" class="buttonmock" style="vertical-align:right"><span> Tips and Tricks </span></a></li>
+                        <li><a href="feedback.html" class="buttonmock" style="vertical-align:left"><span> Feedback</span></a></li>
+                    </ul>
+                </section>
+            </section>
+        </div>
+    </main>
+    <section id="contact" aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h3>Stay Updated</h3>
+                    <h3>Subscribe to our newsletter</h3>
+                </hgroup>
+                <form class="grid" id="subscribe-form" action="/subscribe" method="POST">
+                    <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name"
+                        required />
+                    <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+                    <button type="submit">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <section id="signup" aria-label="Sign Up">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h3>Join Us</h3>
+                    <h3>Sign Up for Exclusive Content</h3>
+                </hgroup>
+                <form class="grid" id="signup-form" action="/signup" method="POST" onsubmit="validateForm(event)">
+                    <input type="text" id="first-name" name="first_name" placeholder="First Name"
+                        aria-label="First Name" required />
+                    <input type="text" id="last-name" name="last_name" placeholder="Last Name" aria-label="Last Name"
+                        required />
+                    <input type="email" id="user-email" name="email" placeholder="Email" aria-label="Email" required />
+                    <input type="password" id="password" name="password" placeholder="Password" aria-label="Password"
+                        required />
+                    <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password"
+                        aria-label="Confirm Password" required />
+                    <input type="tel" id="phone-number" name="phone_number" placeholder="Phone Number"
+                        aria-label="Phone Number" required />
+                    <button type="submit">Sign Up</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <main class="container">
+
+    <div class="grid">
+    <section id="about">
+        <hgroup>
+            <h2>About Us</h2>
+            <h3>Learn more about our mission and values</h3>
+        </hgroup>
+        <p>At Satty Interview Preparation Assistance, we are dedicated to helping job seekers achieve their
+            career goals. Our team is comprised of seasoned professionals with a wealth of experience in various
+            industries, who are passionate about sharing their knowledge and expertise.</p>
+        <p>Our mission is to empower individuals with the skills and confidence they need to succeed in
+            interviews and secure their desired positions. We believe in a personalized approach to interview
+            preparation, tailored to the unique needs and strengths of each individual.</p>
+        <p>We offer a range of services designed to enhance your interview performance, including mock
+            interviews, resume reviews, and practical tips and strategies. Our commitment is to provide
+            comprehensive support and guidance throughout your job search journey.</p>
+        <p>Join us today and take advantage of our extensive resources and expert coaching to excel in your
+            interviews and achieve your career aspirations.</p>
+            <a href="#">Move to Top</a>
+    </section>
+    <section id="contact">
+        <hgroup>
+
+            <h2>Contact</h2>
+            <h6>Mail:sipaforyou@gmail.com<h6>
+                    <h6>Mobile:9988XXXXXX<h6>
+                            <h6>Telephone number:891-XXXXXX<h6>
+        </hgroup>
+        <p>#TeamSatty, GITAM University, Rushikonda, Visakhapatnam-530045</p>
+    </section>
+    
+    </div>
+</main>
+
+
+    <footer class="container">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+    </footer>
+</body>
+
+</html>
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Tests</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        /* Additional styles for the forms */
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1em;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"],
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 0.75em;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: #0056b3;
+        }
+
+        #switch-forms {
+            text-align: center;
+            margin-top: 1em;
+        }
+
+        #switch-forms a {
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        #switch-forms a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <section id="login-section" class="form-container">
+            <form id="login-form">
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <p id="login-error-message" style="color: red; display: none;">Invalid email or password</p>
+            </form>
+            <div id="switch-forms">
+                <p>Don't have an account? <a id="show-signup">Sign up here</a></p>
+            </div>
+        </section>
+        <section id="signup-section" class="form-container" style="display:none;">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <label for="first_name">First Name</label>
+                <input type="text" id="first_name" name="first_name" required>
+                <label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="last_name" required>
+                <label for="email">Email</label>
+                <input type="email" id="signup-email" name="email" required>
+                <label for="password">Password</label>
+                <input type="password" id="signup-password" name="password" required>
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+                <label for="phone_number">Phone Number</label>
+                <input type="text" id="phone_number" name="phone_number" required>
+                <button type="submit">Sign Up</button>
+                <p id="signup-error-message" style="color: red; display: none;">Error signing up</p>
+            </form>
+            <div id="switch-forms">
+                <p>Already have an account? <a id="show-login">Log in here</a></p>
+            </div>
+        </section>
+        <nav class="container-fluid">
+            <ul>
+                <li><strong>Satty Interview Pre Asst</strong></li>
+            </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#getstarted">Get Started</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#signup" role="button">Sign Up</a></li>
+                <li><i class="fa fa-adjust theme-toggle" onclick="toggleTheme()"></i></li>
+            </ul>
+        </nav>
+        <main class="container">
+            <div class="grid">
+                <section id="home">
+                    <hgroup>
+                        <h2>Welcome to Interview Preparation Assistance by Team Satty <sup> GITAM </sup></h2>
+                        <h3>Our mission is to provide comprehensive resources and guidance to help you excel in your
+                            interviews. We offer tips, mock interviews, and personalized feedback to ensure you are fully
+                            prepared for your big day.</h3>
+                    </hgroup>
+                    <h3>We Offer :</h3>
+                    <h2>Mock Programming Tests on Java and Python</h2>
+                    <p>Prepare for technical interviews with our comprehensive mock programming tests. Whether you're a Java
+                        or Python enthusiast, we've got you covered!</p>
+    
+                    <h3>Java Programming Tests</h3>
+                    <p>Our Java programming tests are designed to challenge your problem-solving skills and help you master
+                        the language. With a variety of questions ranging from basic syntax to advanced algorithms, you’ll
+                        be well-prepared for any coding interview.</p>
+    
+                    <h3>Python Programming Tests</h3>
+                    <p>Our Python programming tests cater to both beginners and experienced developers. These tests will
+                        help you understand Python’s versatile capabilities and improve your coding efficiency. From data
+                        structures to complex algorithms, our tests cover it all.</p>
+    
+                    <section id="getstarted">
+                        <h3>Get Started</h3>
+                        <p>Join our program today and take the first step towards landing your dream job. Contact us for
+                            more
+                            details and schedule your first session.</p>
+                        <p>Prepare for your interviews with our comprehensive resources and expert guidance. We offer
+                            personalized coaching, extensive study materials, and mock interviews to help you succeed in any
+                            interview.</p>
+                        <ul>
+                            <li><a href="mock.html">Mock Programming Tests</a></li>
+                            <li>Resume Building</li>
+                            <li><a href="tips.html">Interview Tips and Tricks</a></li>
+                            <li>Personalized Feedback</li><br>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </main>
+        <section id="contact" aria-label="Subscribe example">
+            <div class="container">
+                <article>
+                    <hgroup>
+                        <h3>Stay Updated</h3>
+                        <h3>Subscribe to our newsletter</h3>
+                    </hgroup>
+                    <form class="grid" id="subscribe-form" action="/subscribe" method="POST">
+                        <input type="text" id="firstname" name="firstname" placeholder="First Name" aria-label="First Name"
+                            required />
+                        <input type="email" id="email" name="email" placeholder="Email" aria-label="Email" required />
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+        <section id="signup" aria-label="Sign Up">
+            <div class="container">
+                <article>
+                    <hgroup>
+                        <h3>Join Us</h3>
+                        <h3>Sign Up for Exclusive Content</h3>
+                    </hgroup>
+                    <form class="grid" id="signup-form" action="/signup" method="POST" onsubmit="validateForm(event)">
+                        <input type="text" id="first-name" name="first_name" placeholder="First Name"
+                            aria-label="First Name" required />
+                        <input type="text" id="last-name" name="last_name" placeholder="Last Name" aria-label="Last Name"
+                            required />
+                        <input type="email" id="user-email" name="email" placeholder="Email" aria-label="Email" required />
+                        <input type="password" id="password" name="password" placeholder="Password" aria-label="Password"
+                            required />
+                        <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password"
+                            aria-label="Confirm Password" required />
+                        <input type="tel" id="phone-number" name="phone_number" placeholder="Phone Number"
+                            aria-label="Phone Number" required />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+        <footer class="container">
+            <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+        </footer>
+        </main>
+    </section>
+    </main>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const loginErrorMessage = document.getElementById('login-error-message');
+        const signupErrorMessage = document.getElementById('signup-error-message');
+        const loginSection = document.getElementById('login-section');
+        const signupSection = document.getElementById('signup-section');
+        const mockTestsSection = document.getElementById('mock-tests');
+        const toggleButton = document.getElementById('toggleButton');
+        const myList = document.getElementById('my');
+
+        document.getElementById('show-signup').addEventListener('click', () => {
+            loginSection.style.display = 'none';
+            signupSection.style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', () => {
+            signupSection.style.display = 'none';
+            loginSection.style.display = 'block';
+        });
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const email = loginForm.email.value;
+            const password = loginForm.password.value;
+
+            fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            })
+                .then(response => response.text())
+                .then(data => {
+                    if (data === 'Login successful') {
+                        loginForm.style.display = 'none';
+                        mockTestsSection.style.display = 'block';
+                    } else {
+                        loginErrorMessage.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    loginErrorMessage.style.display = 'block';
+                });
+        });
+
+        signupForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const first_name = signupForm.first_name.value;
+            const last_name = signupForm.last_name.value;
+            const email = signupForm['signup-email'].value;
+            const password = signupForm['signup-password'].value;
+            const confirm_password = signupForm.confirm_password.value;
+            const phone_number = signupForm.phone_number.value;
+
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ first_name, last_name, email, password, confirm_password, phone_number })
+            })
+                .then(response => response.text())
+                .then(data => {
+                    if (data === 'Thank you for signing up!') {
+                        signupForm.reset();
+                        signupSection.style.display = 'none';
+                        loginSection.style.display = 'block';
+                    } else {
+                        signupErrorMessage.textContent = data;
+                        signupErrorMessage.style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    signupErrorMessage.textContent = 'Error signing up';
+                    signupErrorMessage.style.display = 'block';
+                });
+        });
+
+        toggleButton.addEventListener('click', function () {
+            if (myList.style.display === 'none') {
+                myList.style.display = 'block';
+                toggleButton.textContent = 'Hide Tests';
+            } else {
+                myList.style.display = 'none';
+                toggleButton.textContent = 'Start Mock Programming Tests';
+            }
+        });
+    </script>
+</body>
+
+</html>
+-->

@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Programming Tests</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+        <link rel="shortcut icon" href="sattyfavicon.png" type="image/x-icon" width="16px" height="16">
+
+    </head>
+
+    <body>
+        <a href="#" class="header-logo">
+            <img src="teamsattynewsletterhover.png" alt="Team Satty's logo" width="240" height="80">
+        </a>
+        <main class="container">
+            <section id="mock-tests">
+                <h3>Why Choose Our Mock Tests?</h3>
+                    <dl>
+                        <dt>Real-world scenarios and problems</dt>
+                        <dd>Experience scenarios that mimic actual job requirements and challenges.</dd>
+                        <dt>Detailed solutions and explanations</dt>
+                        <dd>Understand the logic and reasoning behind each solution.</dd>
+                        <dt>Timed tests to simulate actual interview conditions</dt>
+                        <dd>Practice under conditions similar to a real interview to improve your time management skills.
+                        </dd>
+                        <dt>Instant feedback to track your progress</dt>
+                        <dd>Receive immediate feedback to identify areas for improvement and track your development.</dd>
+                    </dl>
+                <h2>Mock Programming Tests</h2>
+                <ul id="my" style="display:none;">
+                    <li><a href="https://codecheck.io/assignment/24052518001oivexrijbqp8ezavi2ci2hzf">Programming Test 1:
+                            Python Lists</a></li>
+                    <li><a href="https://codecheck.io/assignment/24052518043s1ir7v4umqicnxc5taqt0pdx">Programming Test 2:
+                            Python Sets and Dictionaries</a></li>
+                    <li><a href="https://codecheck.io/assignment/2405251816cll5y5acv2ss64nsupa37qbfp">Programming Test 3:
+                            Java OO Design, Static Members, Packages</a></li>
+                    <li><a href="https://codecheck.io/assignment/24052519113clbb3ypamvvahkebgb6xmkiv">Programming Test 4:
+                            Java Array Algorithms</a></li>
+                    <li><a href="https://codecheck.io/assignment/24052519126n3wgsaplnrvwk2o6k2ti6nrh">Programming Test 5:
+                            Java Interfaces</a></li>
+                    <li><a href="https://codecheck.io/assignment/24052519149xhlfesohtabiclkwulxqimm0">Programming Test 6:
+                            Java Nested Branches</a></li>
+                    <li><a href="https://codecheck.io/assignment/2405251916e51ouy580f6k7vvps7jicguzk">Programming Test 7:
+                            Java Sentinels and Loop Algorithms</a></li>
+                    <li><a href="https://codecheck.io/assignment/24052519251qkyjmd5osf3wmkg184mmdo26">Programming Test 8:
+                            Python Complex Loops</a></li>
+                    <li><a href="https://codecheck.io/assignment/2405251926bgazarfq25iuro4ww6rbzhxtv">Programming Test 9:
+                            Python Functions</a></li>
+                    <li><a href="https://codecheck.io/assignment/2405251928190dmikp44w75wsy4yw169nka">Programming Test 10:
+                            Python Tables</a></li>
+                </ul>
+                <button id="toggleButton">Start Mock Programming Tests</button>
+                <script>
+                    const toggleButton = document.getElementById('toggleButton');
+                    const myList = document.getElementById('my');
+                    toggleButton.addEventListener('click', function () {
+                        if (myList.style.display === 'none') {
+                            myList.style.display = 'block';
+                            toggleButton.textContent = 'Hide Tests';
+                        } else {
+                            myList.style.display = 'none';
+                            toggleButton.textContent = 'Start Mock Interviews';
+                        }
+                    });
+                </script>
+            </section>
+        </main>
+    </body>
+
+    </html>

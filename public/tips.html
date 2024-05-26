@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Tips and Tricks</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="sattyfavicon.png" type="image/x-icon" width="16px" height="16">
+    <style>
+        /* Adding focus styles for better accessibility */
+        a:focus, button:focus {
+            outline: 2px solid #000;
+            outline-offset: 2px;
+        }
+
+        /* Scroll to top button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #1a202c;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Tooltip */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+
+            /* Position the tooltip */
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gradient-to-r from-yellow-300 to-orange-400">
+    <a href="#" class="header-logo">
+        <img src="teamsattynewsletterhoverblack.png" alt="Team Satty's logo" width="240" height="80">
+    </a>
+    <header class="text-Black text-center py-4">
+        <h1 class="text-4xl font-bold">Interview Tips and Tricks</h1>
+    </header>
+
+    <main class="container mx-auto p-6 bg-white rounded-lg shadow-2xl mt-6 max-w-3xl">
+        <section class="mb-6">
+            
+            <h2 class="text-2xl font-semibold mb-2">Preparation Strategies</h2>
+            <button class="toggle-section bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Expand More
+            </button>
+            <p class="leading-relaxed hidden">Preparation is key to success. Learn how to research the company, understand the job role, and anticipate the questions you might be asked. We provide you with actionable steps to thoroughly prepare for your interview.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Common Interview Questions</h2>
+            <button class="toggle-section bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Expand More
+            </button>
+            <p class="leading-relaxed hidden">Get familiar with the most common interview questions and how to answer them effectively. Our guides cover questions related to your skills, experience, and behavior, ensuring you’re ready for anything.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Body Language and Presentation</h2>
+            <button class="toggle-section bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Expand More
+            </button>
+            <p class="leading-relaxed hidden">Your body language and presentation can make a significant impact. Learn how to present yourself confidently, maintain good posture, and use positive body language to convey your enthusiasm and professionalism.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Handling Difficult Questions</h2>
+            <button class="toggle-section bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Expand More
+            </button>
+            <p class="leading-relaxed hidden">Not all questions are straightforward. We teach you techniques to handle difficult or unexpected questions with ease, turning potential stumbling blocks into opportunities to shine.</p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-2">Mock Interviews</h2>
+            <button class="toggle-section bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                Expand More
+            </button>
+            <p class="leading-relaxed hidden">Practice makes perfect. Participate in our mock interview sessions to experience a real interview setting. Receive feedback on your performance and learn areas of improvement.</p>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-2 tooltip">What We Offer
+                <span class="tooltiptext">Hover over each item to learn more</span>
+            </h2>
+            <dl class="space-y-2">
+                <dt class="font-bold tooltip">Comprehensive preparation strategies
+                    <span class="tooltiptext">Get step-by-step guidance on how to prepare for your interview.</span>
+                </dt>
+                <dd class="ml-4">Get step-by-step guidance on how to prepare for your interview.</dd>
+                <dt class="font-bold tooltip">Guides to common interview questions
+                    <span class="tooltiptext">Learn how to answer the most frequently asked interview questions effectively.</span>
+                </dt>
+                <dd class="ml-4">Learn how to answer the most frequently asked interview questions effectively.</dd>
+                <dt class="font-bold tooltip">Tips on body language and presentation
+                    <span class="tooltiptext">Discover how to use body language to your advantage during interviews.</span>
+                </dt>
+                <dd class="ml-4">Discover how to use body language to your advantage during interviews.</dd>
+                <dt class="font-bold tooltip">Techniques for handling difficult questions
+                    <span class="tooltiptext">Develop strategies to tackle challenging questions with confidence.</span>
+                </dt>
+                <dd class="ml-4">Develop strategies to tackle challenging questions with confidence.</dd>
+                <dt class="font-bold tooltip">Mock interview sessions with feedback
+                    <span class="tooltiptext">Participate in practice interviews and receive constructive feedback to improve your performance.</span>
+                </dt>
+                <dd class="ml-4">Participate in practice interviews and receive constructive feedback to improve your performance.</dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-6">
+        <p>&copy; #TeamSatty Interview Preparation Assistance. All rights reserved.</p>
+    </footer>
+
+    <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+    <script>
+        // Scroll to top button
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Toggle content
+        const toggleButtons = document.querySelectorAll('.toggle-section');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const isExpanded = !content.classList.contains('hidden');
+                content.classList.toggle('hidden');
+                this.textContent = isExpanded ? 'Expand More' : 'Expand Less';
+            });
+        });
+    </script>
+</body>
+
+</html>

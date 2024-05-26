@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalized Feedback - Interview Preparation Assistance</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="shortcut icon" href="sattyfavicon.png" type="image/x-icon">
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                experience: event.target.experience.value,
+                improvements: event.target.improvements.value
+            };
+    
+            console.log('Form Data:', formData); // Log the form data
+    
+            fetch('http://localhost:3000/submit-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response:', data); // Log the response
+                if (data.success) {
+                    alert('Thank you for your feedback!');
+                    event.target.reset();
+                } else {
+                    alert('There was an error submitting your feedback. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your feedback. Please try again.');
+            });
+        });
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, orange, beige);
+            color: #000000;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #10101d;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .container h1 {
+            color: beige;
+            margin-bottom: 20px;
+        }
+        .container form {
+            display: grid;
+            gap: 20px;
+            text-align: left;
+        }
+        .container form input,
+        .container form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        .container form button {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .container form button:hover {
+            background-color: #003366;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+        }
+        .footer small a {
+            color: #004080;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="container-fluid">
+        <a href="#" class="header-logo">
+            <img src="teamsattynewsletterhoverblack.png" alt="Team Satty's logo" width="240" height="80">
+        </a>
+    </nav>
+    <main class="container">
+        <h1>Personalized Feedback</h1>
+        <p>Share your interview experience and receive detailed feedback to help you improve your skills.</p>
+        <form id="feedbackForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="experience">Interview Experience:</label>
+            <textarea id="experience" name="experience" rows="6" placeholder="Describe your interview experience" required></textarea>
+            
+            <label for="improvements">Areas of Improvement:</label>
+            <textarea id="improvements" name="improvements" rows="4" placeholder="What areas do you want to improve?" required></textarea>
+            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+        <p style="color: #2a5b86;">&copy; #TeamSatty Interview Preparation Assistance. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                experience: event.target.experience.value,
+                improvements: event.target.improvements.value
+            };
+
+            fetch('http://localhost:3000/submit-feedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for your feedback!');
+                    event.target.reset();
+                } else {
+                    alert('There was an error submitting your feedback. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your feedback. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>

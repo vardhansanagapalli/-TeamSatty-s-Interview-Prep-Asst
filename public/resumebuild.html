@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resume Building</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="shortcut icon" href="sattyfavicon.png" type="image/x-icon" width="16px" height="16">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, orange, beige);
+            color: #000000;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #10101d;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h1,
+        .container h2,
+        .container h3,
+        .container h4 {
+            color: beige;
+            margin-bottom: 20px;
+        }
+
+        .container p,
+        .container ul {
+            text-align: left;
+            color: beige;
+        }
+
+        .resume-previews {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .resume-previews img {
+            width: 200px;
+            height: auto;
+            margin: 5px;
+            cursor: zoom-in;
+        }
+
+        #image-viewer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            display: none;
+        }
+
+        #full-image {
+            max-width: 90%;
+            max-height: 90%;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .zoomed-in {
+            transform: scale(2);
+            cursor: zoom-out;
+        }
+
+        .container button {
+            background-color: #004080;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #003366;
+        }
+        footer {
+                text-align: center;
+            }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <a href="#" class="header-logo">
+            <img src="teamsattynewsletterhover.png" alt="Team Satty's logo" width="240" height="80">
+        </a>
+        <h1>Resume Building</h1>
+        <section id="resume-building">        
+ 
+            <p>How strong is your resume? Get a free, confidential review from a resume expert.</p>
+            <p><strong>Great Place to create Resume! </strong> Based on 13,221 reviews.</p>
+
+            <h3>How it works</h3>
+            <p>Show us what you're working with. Upload your resume to be reviewed — it’s an easy drag and drop.</p>
+            <ul>
+                <li>Upload your resume to be reviewed — it’s an easy drag and drop.</li>
+                <li>Wait while the magic happens. It takes up to 48 hours for us to review your resume and provide personalized and actionable feedback.</li>
+                <li>View your results. When the results land in your email inbox, it’s time to learn. Find out what you’re doing right and what you could improve upon to achieve your best resume.</li>
+            </ul>
+
+            <h3>Resume Building Activity</h3>
+            <p>To help you create the perfect resume, we have a fun and interactive activity:</p>
+            <ul>
+                <li>Make a copy of the given resume template.</li>
+                <li>Make necessary changes to the template in Canva to tailor it to your experience and skills.</li>
+                <li>Once all changes are done, click "Send to Teacher" for approval.</li>
+            </ul>
+
+            <h3>What to Expect from Your Resume Review</h3>
+            <p>We review your resume comprehensively so you get all the information you need. Feedback topics include:</p>
+            <ul>
+                <li>Style & Organization</li>
+                <li>Writing & Mechanics</li>
+                <li>ATS Analysis</li>
+            </ul>
+            <p>Before your resume reaches the hands of a hiring manager, it often must satisfy an ATS — applicant tracking system. If a resume is not written with an ATS in mind, a qualified candidate can be easily passed over.</p>
+            <ul>
+                <li>Will the ATS (Applicant Tracking System) be able to read your resume?</li>
+                <li>How does the ATS interpret your experience, skills, and the industries you have expertise in?</li>
+                <li>Will an ATS mark you as a best fit for the jobs you're targeting?</li>
+            </ul>
+
+            <h4>Here is the sample preview of resume!!!</h4>
+            <!-- Images showing preview of other resumes -->
+            <div class="resume-previews">
+                <img src="resume1.jpg" alt="Resume Preview 1" onclick="openImage('resume1.jpg')">
+                <img src="resume2.jpg" alt="Resume Preview 2" onclick="openImage('resume2.jpg')">
+                <img src="resume3.jpg" alt="Resume Preview 3" onclick="openImage('resume3.jpg')">
+            </div>
+<br>
+            <div id="image-viewer">
+                <span class="close-btn" onclick="closeImage()">&times;</span>
+                <img id="full-image" src="" alt="Full Image" onclick="toggleZoom()">
+            </div>
+
+            <!-- Button to open Canva link -->
+            <button onclick="openCanva()">Direct Template Link</button>
+
+            <!-- Button to send to teacher for approval -->
+            <button onclick="sendToTeacher()">Click here to join the Team</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <small><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></small>
+        <p style="color: #2a5b86;">&copy; #TeamSatty Interview Preparation Assistance. All rights reserved.</p>
+    </footer>
+
+    <!-- Script to open Canva link -->
+    <script>
+        function openCanva() {
+            window.open('https://www.canva.com/design/DAF6mgc7tDc/lUo77DuY7go_Anc0Rieluw/view?utm_content=DAF6mgc7tDc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview');
+        }
+
+        function openImage(imageSrc) {
+            var imageViewer = document.getElementById('image-viewer');
+            var fullImage = document.getElementById('full-image');
+            fullImage.src = imageSrc;
+            imageViewer.style.display = 'flex';
+        }
+
+        function closeImage() {
+            var imageViewer = document.getElementById('image-viewer');
+            imageViewer.style.display = 'none';
+            var fullImage = document.getElementById('full-image');
+            fullImage.classList.remove('zoomed-in'); // Reset zoom when closing
+        }
+
+        function toggleZoom() {
+            var fullImage = document.getElementById('full-image');
+            if (fullImage.classList.contains('zoomed-in')) {
+                fullImage.classList.remove('zoomed-in');
+            } else {
+                fullImage.classList.add('zoomed-in');
+            }
+        }
+
+        function sendToTeacher() {
+            window.open('https://www.canva.com/brand/join?token=xcNF0jHD8PWVjNd59F6Skw&brandingVariant=edu&invitationDestinationType=group')
+            // Implement the logic to send the resume for approval
+            alert('Please continue the steps shown in Canva.');
+        }
+    </script>
+</body>
+
+</html>
